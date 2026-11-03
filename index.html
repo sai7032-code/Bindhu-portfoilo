@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Agathamudi Himabindu - Computer Science Engineer, Python Developer, and Data Analytics Specialist. Professional Portfolio." />
+  <meta name="keywords" content="Agathamudi Himabindu, Portfolio, Python Developer, Data Analytics, Web Developer, MySQL, IoT Security, Bhaskar Engineering College" />
+  <meta name="author" content="Agathamudi Himabindu" />
+  <title>Agathamudi Himabindu | Software Engineer & Data Analyst Portfolio</title>
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Ambient Glow Effects & Particle Canvas -->
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+  <div class="glow-orb orb-3"></div>
+  <canvas id="star-canvas"></canvas>
+
+  <!-- NAVBAR -->
+  <header class="header-nav-wrap">
+    <nav class="nav-container container" id="navbar">
+      <a href="#hero" class="nav-brand" aria-label="Home">
+        <div class="brand-monogram">
+          <span class="monogram-text">HB</span>
+          <span class="online-indicator"></span>
+        </div>
+        <span class="brand-title">Himabindu<span class="purple-dot">.dev</span></span>
+      </a>
+
+      <!-- Navigation Menu -->
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="#about" class="nav-item">About</a></li>
+          <li><a href="#skills" class="nav-item">Skills</a></li>
+          <li><a href="#internships" class="nav-item">Internships</a></li>
+          <li><a href="#projects" class="nav-item">Projects</a></li>
+          <li><a href="#leadership" class="nav-item">Leadership</a></li>
+          <li><a href="#education" class="nav-item">Education</a></li>
+          <li><a href="#contact" class="nav-item">Contact</a></li>
+        </ul>
+
+        <div class="nav-controls">
+          <!-- Dark / Light Mode Toggle -->
+          <button id="theme-toggle" class="theme-switch-btn" aria-label="Toggle Theme" title="Switch Theme">
+            <svg class="sun-icon" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="moon-icon" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+
+          <a href="#contact" class="btn btn-primary nav-hire-btn">
+            <span>Hire Me</span>
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Hamburger Menu for Mobile -->
+      <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- MAIN WRAPPER -->
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-block">
+      <div class="container hero-layout">
+        <div class="hero-copy">
+          <div class="status-pill reveal">
+            <span class="status-ping"></span>
+            <span>Available for Software & Data Analytics Internships</span>
+          </div>
+
+          <h1 class="hero-heading reveal">
+            Hi, I'm <br />
+            <span class="purple-gradient-text glow-aura">Agathamudi Himabindu</span>
+          </h1>
+
+          <div class="hero-role reveal">
+            <span class="role-prefix">Passionate</span>
+            <span class="typewriter" id="typewriter"></span>
+            <span class="type-cursor">|</span>
+          </div>
+
+          <p class="hero-bio reveal">
+            Computer Science and Engineering undergraduate at <strong>Bhaskar Engineering College</strong> with strong technical expertise in 
+            <strong>Python</strong>, <strong>Data Analytics</strong>, <strong>SQL & MySQL</strong>, and <strong>Web Technologies (HTML, CSS, JavaScript)</strong>. 
+            Proven hands-on experience through <strong>3 industry internships</strong> and leadership as <strong>SAC Technical Team Lead</strong> & <strong>IIT Bombay E-Cell Member</strong>.
+          </p>
+
+          <div class="hero-actions reveal">
+            <a href="#projects" class="btn btn-primary">
+              <span>Explore My Work</span>
+              <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+            </a>
+            <a href="#internships" class="btn btn-outline">
+              <span>View 3 Internships</span>
+              <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+            </a>
+            <button class="btn btn-ghost" id="open-resume-btn">
+              <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+              <span>View Resume</span>
+            </button>
+          </div>
+
+          <!-- Highlight Metric Badges -->
+          <div class="metrics-row reveal">
+            <div class="metric-card">
+              <div class="metric-icon-box purple-accent">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+              </div>
+              <div>
+                <div class="metric-val">7.73 CGPA</div>
+                <div class="metric-sub">B.Tech CSE '27</div>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-icon-box pink-accent">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+              </div>
+              <div>
+                <div class="metric-val">3 Internships</div>
+                <div class="metric-sub">Web • Python • Analytics</div>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-icon-box gold-accent">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              </div>
+              <div>
+                <div class="metric-val">Technical Lead</div>
+                <div class="metric-sub">SAC & IIT-B E-Cell</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Code Terminal / Analytics Visual -->
+        <div class="hero-visual reveal">
+          <div class="glass-terminal">
+            <div class="terminal-bar">
+              <div class="terminal-dots">
+                <span class="t-dot red"></span>
+                <span class="t-dot yellow"></span>
+                <span class="t-dot green"></span>
+              </div>
+              <span class="terminal-title">himabindu_analytics.py</span>
+              <span class="terminal-lang">Python 3.11</span>
+            </div>
+            <div class="terminal-code">
+              <pre><code><span class="c-comment"># Engineer & Data Analyst Profile</span>
+<span class="c-keyword">import</span> pandas <span class="c-keyword">as</span> pd
+<span class="c-keyword">import</span> machine_learning <span class="c-keyword">as</span> ml
+
+<span class="c-keyword">class</span> <span class="c-class">EngineerProfile</span>:
+    <span class="c-keyword">def</span> <span class="c-func">__init__</span>(<span class="c-param">self</span>):
+        <span class="c-param">self</span>.name = <span class="c-str">"Agathamudi Himabindu"</span>
+        <span class="c-param">self</span>.college = <span class="c-str">"Bhaskar Engineering College"</span>
+        <span class="c-param">self</span>.cgpa = <span class="c-num">7.73</span>
+        <span class="c-param">self</span>.skills = [<span class="c-str">"Python"</span>, <span class="c-str">"Data Analytics"</span>, <span class="c-str">"SQL"</span>, <span class="c-str">"Web"</span>]
+        <span class="c-param">self</span>.internships_completed = <span class="c-num">3</span>
+
+    <span class="c-keyword">def</span> <span class="c-func">solve_problem</span>(<span class="c-param">self</span>, dataset):
+        cleaned_data = <span class="c-param">self</span>.clean(dataset)
+        insights = <span class="c-param">self</span>.analyze(cleaned_data)
+        <span class="c-keyword">return</span> insights.generate_value()
+
+himabindu = <span class="c-class">EngineerProfile</span>()
+<span class="c-func">print</span>(<span class="c-str">"Status: Ready to Engineer Impact 💜"</span>)</code></pre>
+            </div>
+            <div class="terminal-tags">
+              <span class="code-pill">Python</span>
+              <span class="code-pill">Data Cleaning</span>
+              <span class="code-pill">SQL & MySQL</span>
+              <span class="code-pill">HTML / CSS / JS</span>
+              <span class="code-pill">MS Excel</span>
+              <span class="code-pill">Git & GitHub</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section-block about-wrap">
+      <div class="container">
+        <div class="section-header-center">
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title">Analytical Mindset & Engineering Passion</h2>
+          <div class="section-rule"></div>
+        </div>
+
+        <div class="about-grid">
+          <div class="glass-box about-narrative">
+            <h3 class="box-heading">
+              <span class="icon-inline">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+              </span>
+              Career Objective & Vision
+            </h3>
+            <p class="lead-paragraph">
+              I am a motivated Computer Science and Engineering student with a strong foundation in 
+              <strong>Python</strong>, <strong>SQL</strong>, <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, and <strong>Data Analytics</strong>. 
+              I am seeking an opportunity to apply my technical skills in a challenging environment, contribute to real-world projects, 
+              and continuously evolve as a high-performing software professional.
+            </p>
+            <p>
+              My background uniquely bridges core software development and analytical data processing: from training machine learning 
+              models to detect real-time IoT cyber intrusions, to engineering responsive front-end user portals, to uncovering actionable 
+              insights through structured data cleaning, SQL relational queries, and Excel modeling.
+            </p>
+
+            <div class="core-values-grid">
+              <div class="value-item">
+                <div class="value-icon">📊</div>
+                <div>
+                  <h4>Data Analytics & Insight Discovery</h4>
+                  <p>Skilled at cleaning messy datasets, identifying patterns, and delivering actionable technical reporting.</p>
+                </div>
+              </div>
+
+              <div class="value-item">
+                <div class="value-icon">💻</div>
+                <div>
+                  <h4>Full-Stack & Python Development</h4>
+                  <p>Building modular Python scripts, responsive web layouts, and optimized MySQL database schemas.</p>
+                </div>
+              </div>
+
+              <div class="value-item">
+                <div class="value-icon">🤝</div>
+                <div>
+                  <h4>Collaborative Technical Leadership</h4>
+                  <p>Technical Team Lead at SAC BEC and active member of E-Cell in collaboration with IIT Bombay.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Bio Side Box -->
+          <div class="glass-box about-side-box">
+            <h3 class="box-heading">Candidate Overview</h3>
+            <ul class="candidate-info-list">
+              <li>
+                <span class="info-label">Name</span>
+                <span class="info-val">Agathamudi Himabindu</span>
+              </li>
+              <li>
+                <span class="info-label">Education</span>
+                <span class="info-val">B.Tech CSE (Class of '27)</span>
+              </li>
+              <li>
+                <span class="info-label">College</span>
+                <span class="info-val">Bhaskar Engineering College</span>
+              </li>
+              <li>
+                <span class="info-label">Email</span>
+                <span class="info-val copy-wrapper">
+                  <a href="mailto:himabinduagathamudi@gmail.com" class="purple-link">himabinduagathamudi@gmail.com</a>
+                  <button class="mini-copy-btn" data-copy="himabinduagathamudi@gmail.com" title="Copy Email">
+                    <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  </button>
+                </span>
+              </li>
+              <li>
+                <span class="info-label">Phone</span>
+                <span class="info-val copy-wrapper">
+                  <a href="tel:+916304689113" class="purple-link">+91-6304689113</a>
+                  <button class="mini-copy-btn" data-copy="+916304689113" title="Copy Phone">
+                    <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  </button>
+                </span>
+              </li>
+              <li>
+                <span class="info-label">Location</span>
+                <span class="info-val">Hyderabad, Telangana, India</span>
+              </li>
+              <li>
+                <span class="info-label">Availability</span>
+                <span class="info-val active-status">Immediate / Open for Roles</span>
+              </li>
+            </ul>
+
+            <div class="side-box-cta">
+              <a href="#contact" class="btn btn-primary btn-full">
+                <span>Contact Himabindu Directly</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="section-block skills-wrap">
+      <div class="container">
+        <div class="section-header-center">
+          <span class="section-tag">Competencies</span>
+          <h2 class="section-title">Technical Expertise & Tooling</h2>
+          <p class="section-desc">A strong combination of programming logic, data analytics, database management, and modern web engineering.</p>
+          <div class="section-rule"></div>
+        </div>
+
+        <div class="skills-card-grid">
+          <!-- 1. Programming & Languages -->
+          <div class="glass-box skill-cat-card">
+            <div class="cat-icon-container">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            </div>
+            <h3 class="cat-name">Programming Languages</h3>
+            <p class="cat-summary">Structured algorithms, object-oriented concepts, and automation.</p>
+
+            <div class="progress-list">
+              <div class="progress-row">
+                <div class="row-header">
+                  <span class="skill-title">Python</span>
+                  <span class="skill-score">Proficient</span>
+                </div>
+                <div class="meter-track"><div class="meter-bar" style="width: 88%;"></div></div>
+                <div class="tag-row">
+                  <span>OOP</span><span>Data Structures</span><span>Automation</span><span>Scripting</span>
+                </div>
+              </div>
+
+              <div class="progress-row">
+                <div class="row-header">
+                  <span class="skill-title">SQL</span>
+                  <span class="skill-score">Proficient</span>
+                </div>
+                <div class="meter-track"><div class="meter-bar" style="width: 85%;"></div></div>
+                <div class="tag-row">
+                  <span>Queries</span><span>Joins</span><span>Aggregations</span><span>Indexes</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Data Analytics -->
+          <div class="glass-box skill-cat-card">
+            <div class="cat-icon-container">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+            </div>
+            <h3 class="cat-name">Data Analytics & Reporting</h3>
+            <p class="cat-summary">Data preparation, exploratory analysis, and visualization.</p>
+
+            <div class="progress-list">
+              <div class="progress-row">
+                <div class="row-header">
+                  <span class="skill-title">Data Cleaning & Prep</span>
+                  <span class="skill-score">Advanced Foundation</span>
+                </div>
+                <div class="meter-track"><div class="meter-bar" style="width: 84%;"></div></div>
+                <div class="tag-row">
+                  <span>Handling Missing Data</span><span>Transformations</span><span>Outlier Filtering</span>
+                </div>
+              </div>
+
+              <div class="progress-row">
+                <div class="row-header">
+                  <span class="skill-title">MS Excel & Data Analysis</span>
+                  <span class="skill-score">Proficient</span>
+                </div>
+                <div class="meter-track"><div class="meter-bar" style="width: 86%;"></div></div>
+                <div class="tag-row">
+                  <span>Pivot Tables</span><span>VLOOKUP/XLOOKUP</span><span>Summary Dashboards</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Web & Database Technologies -->
+          <div class="glass-box skill-cat-card">
+            <div class="cat-icon-container">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+            </div>
+            <h3 class="cat-name">Web & Databases</h3>
+            <p class="cat-summary">Designing responsive interfaces and normalized relational schemas.</p>
+
+            <div class="progress-list">
+              <div class="progress-row">
+                <div class="row-header">
+                  <span class="skill-title">HTML5, CSS3 & JavaScript</span>
+                  <span class="skill-score">Proficient</span>
+                </div>
+                <div class="meter-track"><div class="meter-bar" style="width: 85%;"></div></div>
+                <div class="tag-row">
+                  <span>Semantic HTML</span><span>Responsive Design</span><span>DOM Manipulation</span>
+                </div>
+              </div>
+
+              <div class="progress-row">
+                <div class="row-header">
+                  <span class="skill-title">MySQL Database</span>
+                  <span class="skill-score">Proficient</span>
+                </div>
+                <div class="meter-track"><div class="meter-bar" style="width: 82%;"></div></div>
+                <div class="tag-row">
+                  <span>Schema Design</span><span>CRUD</span><span>Foreign Keys</span><span>Integrity</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Version Control & Soft Skills -->
+          <div class="glass-box skill-cat-card">
+            <div class="cat-icon-container">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <h3 class="cat-name">Version Control & Soft Skills</h3>
+            <p class="cat-summary">Code collaboration tools and team leadership excellence.</p>
+
+            <div class="soft-tags-grid">
+              <span class="soft-badge">Git & GitHub</span>
+              <span class="soft-badge">Problem Solving</span>
+              <span class="soft-badge">Self Learning</span>
+              <span class="soft-badge">Clear Communication</span>
+              <span class="soft-badge">Team Management</span>
+              <span class="soft-badge">Team Building & Networking</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERNSHIPS SECTION (HIGHLIGHTING 3 INTERNSHIPS) -->
+    <section id="internships" class="section-block internships-wrap">
+      <div class="container">
+        <div class="section-header-center">
+          <span class="section-tag">Industry Experience</span>
+          <h2 class="section-title">3 Professional Internships</h2>
+          <p class="section-desc">Hands-on experience delivering web solutions, Python software tasks, and data analytics reporting.</p>
+          <div class="section-rule"></div>
+        </div>
+
+        <div class="internships-grid">
+          <!-- Internship 1: Web Development Intern -->
+          <div class="glass-box internship-card">
+            <div class="internship-badge-header">
+              <span class="internship-domain web-tint">Web Development</span>
+              <span class="internship-date">Jan 2026 – Apr 2026</span>
+            </div>
+            <h3 class="internship-role">Web Development Intern</h3>
+            <h4 class="internship-company">Pursuit Future Technologies</h4>
+            <p class="internship-desc">
+              Developed modern, responsive web pages using HTML and web standards, optimizing multi-device presentation and user engagement.
+            </p>
+            <ul class="internship-points">
+              <li>Designed and developed responsive layouts rendering seamlessly across desktop, tablet, and mobile browsers.</li>
+              <li>Applied semantic markup and clean styling patterns for maximum accessibility and loading performance.</li>
+              <li>Collaborated in sprint meetings and integrated client feedback into iterative UI deployments.</li>
+            </ul>
+            <div class="internship-techs">
+              <span class="tech-chip">HTML5</span>
+              <span class="tech-chip">CSS3</span>
+              <span class="tech-chip">Responsive Web</span>
+              <span class="tech-chip">UI Design</span>
+            </div>
+          </div>
+
+          <!-- Internship 2: Python Programming Intern -->
+          <div class="glass-box internship-card">
+            <div class="internship-badge-header">
+              <span class="internship-domain python-tint">Python Programming</span>
+              <span class="internship-date">Jun 2026 – Jul 2026</span>
+            </div>
+            <h3 class="internship-role">Python Programming Intern</h3>
+            <h4 class="internship-company">Oasis Infobyte</h4>
+            <p class="internship-desc">
+              Completed real-world Python-based programming tasks, algorithmic challenges, and software utility projects.
+            </p>
+            <ul class="internship-points">
+              <li>Designed modular Python programs implementing OOP, recursion, and core data structure concepts.</li>
+              <li>Wrote clean, documented, and testable code for various automation scripts and problem-solving modules.</li>
+              <li>Strengthened debugging skills and adhered to Python PEP-8 coding standards throughout the internship.</li>
+            </ul>
+            <div class="internship-techs">
+              <span class="tech-chip">Python</span>
+              <span class="tech-chip">Object-Oriented (OOP)</span>
+              <span class="tech-chip">Scripting</span>
+              <span class="tech-chip">Git</span>
+            </div>
+          </div>
+
+          <!-- Internship 3: Data Analytics Intern -->
+          <div class="glass-box internship-card">
+            <div class="internship-badge-header">
+              <span class="internship-domain analytics-tint">Data Analytics</span>
+              <span class="internship-date">May 2026 – Jun 2026</span>
+            </div>
+            <h3 class="internship-role">Data Analytics Intern</h3>
+            <h4 class="internship-company">Novitech R&D Pvt. Ltd.</h4>
+            <p class="internship-desc">
+              Worked on hands-on data analysis, data cleaning pipelines, and structured executive reporting for decision-making.
+            </p>
+            <ul class="internship-points">
+              <li>Performed comprehensive data cleaning: resolving inconsistencies, handling missing values, and formatting inputs.</li>
+              <li>Conducted exploratory data analysis (EDA) to extract key trends and summarize statistical distributions.</li>
+              <li>Generated data reports and actionable summaries using MS Excel and data visualization practices.</li>
+            </ul>
+            <div class="internship-techs">
+              <span class="tech-chip">Data Cleaning</span>
+              <span class="tech-chip">Data Analysis</span>
+              <span class="tech-chip">MS Excel</span>
+              <span class="tech-chip">Reporting</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="section-block projects-wrap">
+      <div class="container">
+        <div class="section-header-center">
+          <span class="section-tag">Featured Work</span>
+          <h2 class="section-title">Key Engineering Projects</h2>
+          <p class="section-desc">Machine Learning cybersecurity intrusion detection, database systems, and data analytics.</p>
+          <div class="section-rule"></div>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: IoT Cybersecurity -->
+          <div class="glass-box project-card">
+            <div class="proj-header-row">
+              <div class="proj-badge">
+                <span>🛡️</span>
+                <span>Cybersecurity & Machine Learning</span>
+              </div>
+              <span class="proj-year">2026</span>
+            </div>
+
+            <h3 class="proj-name">Detection of Real-Time Malicious Intrusions and Attacks in IoT-Empowered Cybersecurity Infrastructure</h3>
+
+            <p class="proj-desc">
+              An intelligent cybersecurity surveillance framework engineered to detect malicious intrusions, suspicious network packets, 
+              and unauthorized anomalies in real-time within resource-constrained IoT architectures.
+            </p>
+
+            <div class="proj-key-points">
+              <h4>Implementation Highlights:</h4>
+              <ul>
+                <li>Developed a real-time detection pipeline for IoT sensor and network infrastructure.</li>
+                <li>Applied Machine Learning classification models to detect attack signatures and anomalous behavioral patterns.</li>
+                <li>Built using Python and ML libraries for proactive security monitoring and automated alerts.</li>
+              </ul>
+            </div>
+
+            <div class="proj-tags-list">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Machine Learning</span>
+              <span class="tech-tag">IoT Security</span>
+              <span class="tech-tag">Anomaly Detection</span>
+              <span class="tech-tag">Network Analysis</span>
+            </div>
+
+            <div class="proj-action-row">
+              <button class="btn btn-outline btn-sm open-details-btn" data-project="iot-security">
+                <span>View Architecture</span>
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Project 2: Smart Medication Reminder -->
+          <div class="glass-box project-card">
+            <div class="proj-header-row">
+              <div class="proj-badge">
+                <span>💊</span>
+                <span>Healthcare & Database Systems</span>
+              </div>
+              <span class="proj-year">2026</span>
+            </div>
+
+            <h3 class="proj-name">Smart Medication Reminder & Patient Adherence System</h3>
+
+            <p class="proj-desc">
+              A healthcare productivity application created to remind patients to take medications on time, 
+              preventing missed doses with structured schedule management and persistent SQL data tracking.
+            </p>
+
+            <div class="proj-key-points">
+              <h4>Implementation Highlights:</h4>
+              <ul>
+                <li>Created intuitive interface to record medicine names, dosages, and exact reminder intervals.</li>
+                <li>Engineered timed notification alerts for patients and caregivers when medicines are due.</li>
+                <li>Stored and managed relational prescription datasets with normalized tables using SQL.</li>
+              </ul>
+            </div>
+
+            <div class="proj-tags-list">
+              <span class="tech-tag">SQL</span>
+              <span class="tech-tag">MySQL Database</span>
+              <span class="tech-tag">Notification Engine</span>
+              <span class="tech-tag">Data Management</span>
+              <span class="tech-tag">Python</span>
+            </div>
+
+            <div class="proj-action-row">
+              <button class="btn btn-outline btn-sm open-details-btn" data-project="medication-reminder">
+                <span>View Architecture</span>
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEADERSHIP & EXTRA-CURRICULAR SECTION -->
+    <section id="leadership" class="section-block leadership-wrap">
+      <div class="container">
+        <div class="section-header-center">
+          <span class="section-tag">Leadership & Engagement</span>
+          <h2 class="section-title">Extra-Curricular Honors & Team Leadership</h2>
+          <p class="section-desc">Leading technical initiatives and fostering student entrepreneurship across campus.</p>
+          <div class="section-rule"></div>
+        </div>
+
+        <div class="leadership-grid">
+          <!-- Lead 1: Technical Team Lead SAC BEC -->
+          <div class="glass-box leadership-card">
+            <div class="lead-badge-pill">College Leadership</div>
+            <div class="lead-icon-box purple-glow">
+              <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+            <h3 class="lead-title">Technical Team Lead</h3>
+            <h4 class="lead-org">SAC BEC (Student Affairs Council) — 2026</h4>
+            <p class="lead-desc">
+              Spearheading the technical team at Bhaskar Engineering College's Student Affairs Council. 
+              Organizing college tech events, hackathons, guiding junior engineering peers, and overseeing digital event infrastructure.
+            </p>
+            <div class="lead-skills">
+              <span>Technical Leadership</span>
+              <span>Event Coordination</span>
+              <span>Mentorship</span>
+            </div>
+          </div>
+
+          <!-- Lead 2: E-Cell Tie up with IIT BOMBAY -->
+          <div class="glass-box leadership-card">
+            <div class="lead-badge-pill iit-pill">National Collaboration</div>
+            <div class="lead-icon-box pink-glow">
+              <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+            </div>
+            <h3 class="lead-title">Team Member – Entrepreneurship Cell (E-Cell)</h3>
+            <h4 class="lead-org">BEC — Tie-up with IIT BOMBAY (2026)</h4>
+            <p class="lead-desc">
+              Active core member representing Bhaskar Engineering College in the prestigious Entrepreneurship Cell partnership with 
+              <strong>IIT Bombay</strong>. Collaborating on startup initiatives, innovation summits, business model design, and inter-institutional networking.
+            </p>
+            <div class="lead-skills">
+              <span>Startup Ideation</span>
+              <span>IIT Bombay Network</span>
+              <span>Team Building</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section id="education" class="section-block education-wrap">
+      <div class="container">
+        <div class="section-header-center">
+          <span class="section-tag">Academics</span>
+          <h2 class="section-title">Educational Background</h2>
+          <div class="section-rule"></div>
+        </div>
+
+        <div class="education-grid">
+          <!-- B.Tech -->
+          <div class="glass-box edu-card">
+            <div class="edu-top-row">
+              <span class="edu-chip">Current Degree</span>
+              <span class="edu-time">2023 – 2027</span>
+            </div>
+            <h3 class="edu-title">Bachelor of Technology (B.Tech)</h3>
+            <h4 class="edu-sub">Computer Science and Engineering</h4>
+            <p class="edu-school">Bhaskar Engineering College</p>
+            <div class="edu-score-box">
+              <span class="score-label">CGPA</span>
+              <span class="score-val purple-score">7.73 / 10</span>
+            </div>
+            <p class="edu-note">Comprehensive coursework in Algorithms, Data Structures, Database Systems, Computer Networks, and Machine Learning.</p>
+          </div>
+
+          <!-- Intermediate -->
+          <div class="glass-box edu-card">
+            <div class="edu-top-row">
+              <span class="edu-chip chip-done">Completed</span>
+              <span class="edu-time">2021 – 2023</span>
+            </div>
+            <h3 class="edu-title">Intermediate (MPC)</h3>
+            <h4 class="edu-sub">Maths, Physics & Chemistry</h4>
+            <p class="edu-school">S R Junior College</p>
+            <div class="edu-score-box">
+              <span class="score-label">Percentage</span>
+              <span class="score-val purple-score">86.8%</span>
+            </div>
+            <p class="edu-note">Solid mathematical and analytical foundation, excelling in logic, algebra, and physical sciences.</p>
+          </div>
+
+          <!-- SSC -->
+          <div class="glass-box edu-card">
+            <div class="edu-top-row">
+              <span class="edu-chip chip-done">Completed</span>
+              <span class="edu-time">Passing Year: 2021</span>
+            </div>
+            <h3 class="edu-title">Secondary School Certificate (SSC)</h3>
+            <h4 class="edu-sub">Class 10th Curriculum</h4>
+            <p class="edu-school">Krishnaveni High School</p>
+            <div class="edu-score-box">
+              <span class="score-label">CGPA</span>
+              <span class="score-val gold-score">9.8 / 10</span>
+            </div>
+            <p class="edu-note">Distinguished academic performance demonstrating consistency, discipline, and scholarly dedication from early school years.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section-block contact-wrap">
+      <div class="container">
+        <div class="section-header-center">
+          <span class="section-tag">Let's Connect</span>
+          <h2 class="section-title">Get In Touch With Himabindu</h2>
+          <p class="section-desc">Open for internships, software engineering roles, data analytics positions, and project collaborations.</p>
+          <div class="section-rule"></div>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Channels -->
+          <div class="contact-details-box">
+            <div class="glass-box contact-item-card">
+              <div class="c-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div class="c-info">
+                <span class="c-label">Direct Email</span>
+                <span class="c-val">himabinduagathamudi@gmail.com</span>
+              </div>
+              <button class="mini-action-btn" data-copy="himabinduagathamudi@gmail.com" title="Copy Email">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </div>
+
+            <div class="glass-box contact-item-card">
+              <div class="c-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </div>
+              <div class="c-info">
+                <span class="c-label">Phone & WhatsApp</span>
+                <span class="c-val">+91-6304689113</span>
+              </div>
+              <button class="mini-action-btn" data-copy="+916304689113" title="Copy Phone">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </div>
+
+            <div class="glass-box contact-item-card">
+              <div class="c-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <div class="c-info">
+                <span class="c-label">Location</span>
+                <span class="c-val">Bhaskar Engineering College, Hyderabad, India</span>
+              </div>
+            </div>
+
+            <!-- Resume Download Box -->
+            <div class="glass-box resume-action-box">
+              <span class="resume-badge">Verified Resume</span>
+              <h3>Curriculum Vitae</h3>
+              <p>Explore full academic credentials, internship verifications, and technical skill summaries.</p>
+              <button class="btn btn-primary" id="open-resume-btn-2">
+                <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                <span>Preview & Print Resume</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="glass-box contact-form-box">
+            <h3 class="form-head">Send a Quick Message</h3>
+            <p class="form-sub">Feel free to message regarding opportunities or project inquiries.</p>
+
+            <form id="contact-form" novalidate>
+              <div class="form-field">
+                <label for="name">Your Name <span class="req">*</span></label>
+                <input type="text" id="name" name="name" class="input-ctrl" placeholder="e.g. Hiring Manager" required />
+                <span class="field-error" id="name-error">Please provide your name</span>
+              </div>
+
+              <div class="form-field">
+                <label for="email">Your Email <span class="req">*</span></label>
+                <input type="email" id="email" name="email" class="input-ctrl" placeholder="e.g. manager@company.com" required />
+                <span class="field-error" id="email-error">Please provide a valid email address</span>
+              </div>
+
+              <div class="form-field">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" class="input-ctrl" placeholder="e.g. Internship Opportunity / Technical Collaboration" />
+              </div>
+
+              <div class="form-field">
+                <label for="message">Message <span class="req">*</span></label>
+                <textarea id="message" name="message" rows="4" class="input-ctrl text-area" placeholder="Write your message here..." required></textarea>
+                <span class="field-error" id="message-error">Please enter your message</span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
+                <span>Send Message</span>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+
+              <div id="form-msg-box" class="form-alert hidden"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer-block">
+    <div class="container footer-content">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-monogram">
+            <span class="monogram-text">HB</span>
+          </div>
+          <span class="brand-title">Agathamudi Himabindu</span>
+        </div>
+        <p class="footer-text">
+          Computer Science Engineer & Data Analytics Enthusiast. Engineering clean, secure, and data-driven solutions with Python and MySQL.
+        </p>
+      </div>
+
+      <div class="footer-mid">
+        <ul class="footer-nav">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#internships">Internships</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#leadership">Leadership</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="footer-contacts">
+          <a href="mailto:himabinduagathamudi@gmail.com" class="footer-social-btn" title="Email Himabindu">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          </a>
+          <a href="tel:+916304689113" class="footer-social-btn" title="Call Himabindu">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Agathamudi Himabindu. All rights reserved.</p>
+        <p class="footer-badge-note">Designed in Royal Purple & Amethyst Violet 💜</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCROLL TO TOP -->
+  <button id="scroll-top-btn" class="scroll-top" aria-label="Scroll to top" title="Scroll to top">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="toast-container" class="toast-hub"></div>
+
+  <!-- RESUME MODAL -->
+  <div id="resume-modal" class="modal-backdrop" aria-hidden="true">
+    <div class="modal-card glass-box">
+      <button class="modal-x-btn" id="resume-close-btn" aria-label="Close Modal">&times;</button>
+      <div class="modal-resume-top">
+        <h2>Agathamudi Himabindu</h2>
+        <p>B.Tech Computer Science and Engineering | Class of 2027</p>
+        <div class="modal-contact-row">
+          <span>📞 +91-6304689113</span>
+          <span>✉️ himabinduagathamudi@gmail.com</span>
+          <span>📍 Hyderabad, India</span>
+        </div>
+      </div>
+
+      <div class="modal-resume-body">
+        <div class="m-section">
+          <h3>Career Objective</h3>
+          <p>Motivated Computer Science and Engineering student with strong foundation in Python, SQL, HTML, CSS, JavaScript and Data Analytics. Seeking an opportunity to apply technical skills in a challenging environment, contribute to real-world projects, and grow as a software professional.</p>
+        </div>
+
+        <div class="m-section">
+          <h3>Education</h3>
+          <p>• <strong>B.Tech CSE:</strong> Bhaskar Engineering College (CGPA: 7.73/10, Expected 2027)</p>
+          <p>• <strong>Intermediate MPC:</strong> S R Junior College (86.8%, 2023)</p>
+          <p>• <strong>SSC:</strong> Krishnaveni High School (CGPA: 9.8/10, 2021)</p>
+        </div>
+
+        <div class="m-section">
+          <h3>Internships (3)</h3>
+          <p>• <strong>Web Development Intern</strong> at Pursuit Future Technologies (Jan – Apr 2026)</p>
+          <p>• <strong>Python Programming Intern</strong> at Oasis Infobyte (Jun – Jul 2026)</p>
+          <p>• <strong>Data Analytics Intern</strong> at Novitech R&D Pvt. Ltd. (May – Jun 2026)</p>
+        </div>
+
+        <div class="m-section">
+          <h3>Projects</h3>
+          <p>• <strong>IoT Malicious Intrusion Detection:</strong> ML & Python real-time cybersecurity threat monitoring.</p>
+          <p>• <strong>Smart Medication Reminder:</strong> Notification and dosage management with SQL relational database.</p>
+        </div>
+
+        <div class="m-section">
+          <h3>Leadership & Activities</h3>
+          <p>• <strong>Technical Team Lead</strong> at SAC BEC (2026)</p>
+          <p>• <strong>Team member of E-cell</strong>, BEC - Tie up with IIT BOMBAY (2026)</p>
+        </div>
+      </div>
+
+      <div class="modal-resume-actions">
+        <button class="btn btn-outline" id="print-resume-btn">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+          <span>Print / Save as PDF</span>
+        </button>
+        <button class="btn btn-primary" id="copy-summary-btn">
+          <span>Copy Summary to Clipboard</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECT DETAILS MODAL -->
+  <div id="project-modal" class="modal-backdrop" aria-hidden="true">
+    <div class="modal-card glass-box">
+      <button class="modal-x-btn" id="project-close-btn" aria-label="Close Modal">&times;</button>
+      <div id="project-modal-content">
+        <!-- Dynamically injected via script.js -->
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
